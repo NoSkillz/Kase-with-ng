@@ -1,0 +1,24 @@
+<div class="row" ng-controller="TestCaseController">
+    <h3>ProjectName</h3>
+
+    <div class="col-sm-3">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4>Test cases</h4></div>
+            <div class="panel-body">
+                <div class="list-group" ng-repeat="tc in tcs">
+                    <a class="list-group-item" ng-class="{active: $index == active}" ng-click="toggleActive($index)">{{tc.name}}</a>
+                </div>
+
+                <form ng-submit="addTestcase(testcase)">
+                    <div class="input-group text-center">
+                        <input type="text" class="form-control" placeholder="Type a new test case..." ng-model="testcase">
+                    <span class="input-group-btn">
+                        <button type="submit" value="addTestCase" class="btn btn-primary">Add</button>
+                    </span>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
