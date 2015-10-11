@@ -5,7 +5,7 @@
 (function () {
     var app = angular.module('Kase');
 
-    var TestCaseController = function($scope, $routeParams){
+    var TestCaseController = function ($scope) {
 
         var tcs = [
             {
@@ -18,18 +18,19 @@
                 name: 'third one'
             }
         ];
-
-        $scope.active = 0;
-
-        $scope.toggleActive = function(index){
-            $scope.active = index;
-        };
-
         $scope.tcs = tcs;
 
+        // add a testcase to the list
+        $scope.addTestcase = function (testcase) {
+            if (testcase.trim() !== '') {
+                $scope.tcs.push({name: testcase});
+            }
+        };
 
-        $scope.addTestcase = function(name){
-            $scope.tcs.push({name: name});
+        // set a test case as active (read: selected)
+        $scope.active = 0;
+        $scope.toggleActive = function (index) {
+            $scope.active = index;
         };
 
 
