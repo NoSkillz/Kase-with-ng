@@ -3,14 +3,14 @@
  */
 
 (function () {
-    var app = angular.module('Kase', ['ngRoute']);
-
-    app.config = function($routeProvider){
-        $routeProvider
-            .when('/', {
-                templateUrl: 'testcase',
-                controller: 'TestCaseController'
-            })
-            .otherwise({redirectTo: '/'});
-    };
+    var app = angular.module('Kase', []);
+    //
+    //app.config = function($routeProvider){
+    //    $routeProvider
+    //        .when('/', {
+    //            templateUrl: 'testcase',
+    //            controller: 'TestCaseController'
+    //        })
+    //        .otherwise({redirectTo: '/'});
+    //};
 }());

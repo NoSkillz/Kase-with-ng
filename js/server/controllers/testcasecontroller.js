@@ -24,6 +24,7 @@
         $scope.addTestcase = function (testcase) {
             if (testcase.trim() !== '') {
                 $scope.tcs.push({name: testcase});
+                $scope.testcase = '';
             }
         };
 
